@@ -1,0 +1,92 @@
+# 右从臂配置模板：达妙电机 + USB2CAN
+arm:
+  name: slave_right
+  role: slave
+  side: right
+
+safety:
+  default_read_only: true
+  auto_enable_on_startup: false
+  auto_home_on_startup: false
+  require_position_read_before_motion: true
+  require_limit_check_before_motion: true
+  emergency_stop_enabled: true
+  require_double_confirm_before_save_zero: true
+
+bus:
+  type: usb2can
+  channel: can1
+  bitrate: 1000000
+  timeout_s: 0.1
+
+joints:
+  - name: joint1
+    index: 1
+    motor_model: DM-J4030P-2EC
+    can_id: 0x11
+    direction: 1
+    zero_offset_rad: 0.0
+    limit_min_rad: -3.1416
+    limit_max_rad: 3.1416
+    max_velocity_rad_s: 0.5
+    max_torque_nm: 1.0
+  - name: joint2
+    index: 2
+    motor_model: DM-J4030P-2EC
+    can_id: 0x12
+    direction: 1
+    zero_offset_rad: 0.0
+    limit_min_rad: -3.1416
+    limit_max_rad: 3.1416
+    max_velocity_rad_s: 0.5
+    max_torque_nm: 1.0
+  - name: joint3
+    index: 3
+    motor_model: DM-J4030P-2EC
+    can_id: 0x13
+    direction: 1
+    zero_offset_rad: 0.0
+    limit_min_rad: -3.1416
+    limit_max_rad: 3.1416
+    max_velocity_rad_s: 0.5
+    max_torque_nm: 1.0
+  - name: joint4
+    index: 4
+    motor_model: DM-J4310-2EC V1.2
+    can_id: 0x14
+    direction: 1
+    zero_offset_rad: 0.0
+    limit_min_rad: -3.1416
+    limit_max_rad: 3.1416
+    max_velocity_rad_s: 0.5
+    max_torque_nm: 1.0
+  - name: joint5
+    index: 5
+    motor_model: DM-J4310-2EC V1.2
+    can_id: 0x15
+    direction: 1
+    zero_offset_rad: 0.0
+    limit_min_rad: -3.1416
+    limit_max_rad: 3.1416
+    max_velocity_rad_s: 0.5
+    max_torque_nm: 1.0
+  - name: joint6
+    index: 6
+    motor_model: DM-J4310-2EC V1.2
+    can_id: 0x16
+    direction: 1
+    zero_offset_rad: 0.0
+    limit_min_rad: -3.1416
+    limit_max_rad: 3.1416
+    max_velocity_rad_s: 0.5
+    max_torque_nm: 1.0
+  - name: joint7
+    index: 7
+    motor_model: DM-J4310-2EC V1.1
+    can_id: 0x17
+    direction: 1
+    zero_offset_rad: 0.0
+    limit_min_rad: -3.1416
+    limit_max_rad: 3.1416
+    max_velocity_rad_s: 0.5
+    max_torque_nm: 1.0

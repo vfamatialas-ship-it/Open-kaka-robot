@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs and local runtime outputs
+logs/*
+!logs/.gitkeep
+*.log
+assets/**/export.log
+
+# Local calibration backups / temporary files
+*.bak
+*.tmp
+
+# Third-party SDKs cloned locally
+third_party/damiao/DM_Control_Python/
+third_party/feetech/*/
+
+# Node / web viewer
+web_viewer/pink_slave_3d/node_modules/
+web_viewer/pink_slave_3d/dist/
+web_viewer/pink_slave_3d/.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

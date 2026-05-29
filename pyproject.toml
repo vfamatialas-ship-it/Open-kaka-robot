@@ -1,0 +1,13 @@
+[project]
+name = "open-kaka-v0"
+version = "0.1.0"
+description = "Basic control, calibration, teleoperation, and visualization stack for an open dual-arm robot."
+requires-python = ">=3.10"
+dependencies = [
+  "pyserial>=3.5",
+  "pyyaml>=6.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["robot_core*"]

@@ -1,0 +1,185 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #101217;
+  color: #edf2ff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 64px minmax(0, 1fr);
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border-bottom: 1px solid #252a34;
+  background: #171b23;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+p {
+  margin: 5px 0 0;
+  color: #95a3b8;
+  font-size: 12px;
+}
+
+#status {
+  color: #8ec5ff;
+  font-size: 13px;
+  text-align: right;
+  white-space: pre-line;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  min-height: 0;
+}
+
+#viewport {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+canvas {
+  display: block;
+}
+
+aside {
+  overflow: auto;
+  padding: 14px;
+  border-left: 1px solid #252a34;
+  background: #f3f5f8;
+  color: #111827;
+}
+
+.panel {
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid #d8dce3;
+  background: #ffffff;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+button {
+  border: 1px solid #c8d0dc;
+  background: #ffffff;
+  color: #111827;
+  padding: 6px 8px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f0f4fa;
+}
+
+input,
+select,
+textarea {
+  width: 70px;
+  border: 1px solid #c8d0dc;
+  padding: 4px;
+  font: inherit;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  resize: vertical;
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 12px;
+  white-space: pre;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.runtime {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.runtime label {
+  margin: 0;
+}
+
+.ok {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.bad {
+  color: #b00020;
+  font-weight: 600;
+}
+
+.warn {
+  color: #b45309;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  padding: 6px 4px;
+  border-bottom: 1px solid #dde2ea;
+  text-align: right;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+#connection-detail {
+  color: #4b5563;
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: break-all;
+}

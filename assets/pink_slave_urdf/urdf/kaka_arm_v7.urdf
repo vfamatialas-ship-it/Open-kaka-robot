@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="kaka_arm_v7">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="4.76699719298423E-06 -8.15420636124387E-07 0.0222432282390383"
+        rpy="0 0 0" />
+      <mass
+        value="1.09744945381441" />
+      <inertia
+        ixx="0.00331553425808279"
+        ixy="1.93854687584053E-08"
+        ixz="-1.19479574085107E-08"
+        iyy="0.00333524921444572"
+        iyz="-1.80532397907084E-07"
+        izz="0.00642546170495103" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1">
+    <inertial>
+      <origin
+        xyz="0.012598883501542 0.00138888617236277 0.0384773775340916"
+        rpy="0 0 0" />
+      <mass
+        value="0.20508357522801" />
+      <inertia
+        ixx="0.000124082205579915"
+        ixy="1.28153673427719E-06"
+        ixz="-7.31384516622263E-06"
+        iyy="0.000116611062869396"
+        iyz="2.79108786829792E-06"
+        izz="0.00012912021849992" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0775"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.61"
+      upper="2.61"
+      effort="40"
+      velocity="5.85" />
+  </joint>
+  <link
+    name="L2">
+    <inertial>
+      <origin
+        xyz="-0.142894449304073 -0.0114382931533865 -0.0236961184526756"
+        rpy="0 0 0" />
+      <mass
+        value="0.715798409110679" />
+      <inertia
+        ixx="0.000432500202300148"
+        ixy="-5.60650849217114E-06"
+        ixz="3.38804381249468E-07"
+        iyy="0.00101997309313538"
+        iyz="5.07496344755812E-07"
+        izz="0.000890310646773173" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="0.021866 0.024758 0.04945"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="L1" />
+    <child
+      link="L2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="40"
+      velocity="5.86" />
+  </joint>
+  <link
+    name="L3">
+    <inertial>
+      <origin
+        xyz="0.103963455009787 -2.14317425368815E-05 -0.0288561265810146"
+        rpy="0 0 0" />
+      <mass
+        value="0.274568623804452" />
+      <inertia
+        ixx="0.000156756572542988"
+        ixy="-5.50117408873804E-09"
+        ixz="-9.09693601890909E-08"
+        iyy="0.000232744684080357"
+        iyz="-4.80652220809517E-08"
+        izz="0.000191032724357723" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="revolute">
+    <origin
+      xyz="-0.24404 -0.057 0.0045917"
+      rpy="0 0 -0.011489" />
+    <parent
+      link="L2" />
+    <child
+      link="L3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="40"
+      velocity="5.86" />
+  </joint>
+  <link
+    name="L4">
+    <inertial>
+      <origin
+        xyz="-0.000430009761231087 -0.00043899059141661 0.0385815596817507"
+        rpy="0 0 0" />
+      <mass
+        value="0.146858220037625" />
+      <inertia
+        ixx="7.24596290395157E-05"
+        ixy="-1.85744385985177E-07"
+        ixz="-7.97071499784898E-07"
+        iyy="7.42573764614976E-05"
+        iyz="-2.25290532122518E-06"
+        izz="6.07222589331949E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="revolute">
+    <origin
+      xyz="0.19259 0 -0.029132"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="L3" />
+    <child
+      link="L4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="7"
+      velocity="20.9" />
+  </joint>
+  <link
+    name="L5">
+    <inertial>
+      <origin
+        xyz="-0.000442805058557427 0.0544653769580929 -0.0216286934154191"
+        rpy="0 0 0" />
+      <mass
+        value="0.171600475472766" />
+      <inertia
+        ixx="8.7033255679848E-05"
+        ixy="-4.60759982698815E-07"
+        ixz="1.42882802464801E-08"
+        iyy="9.86877716848725E-05"
+        iyz="1.89921041075456E-07"
+        izz="6.21904291272827E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="revolute">
+    <origin
+      xyz="0.00025154 -0.022245 0.046509"
+      rpy="1.5708 -0.0045376 0" />
+    <parent
+      link="L4" />
+    <child
+      link="L5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.22"
+      upper="1.22"
+      effort="7"
+      velocity="20.9" />
+  </joint>
+  <link
+    name="L6">
+    <inertial>
+      <origin
+        xyz="-0.00731756167991882 -1.97541243023291E-05 0.0397223771901161"
+        rpy="0 0 0" />
+      <mass
+        value="0.256183365613942" />
+      <inertia
+        ixx="0.000185930422117077"
+        ixy="1.23788465411674E-08"
+        ixz="8.02482089440516E-06"
+        iyy="0.000116416838015457"
+        iyz="2.23795484435717E-08"
+        izz="0.000130210653536729" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="revolute">
+    <origin
+      xyz="0 0.0925 -0.022495"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="L5" />
+    <child
+      link="L6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="7"
+      velocity="20.9" />
+  </joint>
+  <link
+    name="L7">
+    <inertial>
+      <origin
+        xyz="-4.45286840733417E-09 -7.72959474204526E-12 0.0096392698210076"
+        rpy="0 0 0" />
+      <mass
+        value="0.011432384671351" />
+      <inertia
+        ixx="1.42954458904692E-06"
+        ixy="-1.15273305460333E-18"
+        ixz="4.74739813640469E-13"
+        iyy="1.42954530337774E-06"
+        iyz="8.93894643686476E-17"
+        izz="2.18792767073057E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.956862745098039 0.729411764705882 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/L7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J7"
+    type="revolute">
+    <origin
+      xyz="-0.012 0 0.043718"
+      rpy="1.5708 -1.5708 1.5708" />
+    <parent
+      link="L6" />
+    <child
+      link="L7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.39"
+      upper="0"
+      effort="7"
+      velocity="20.9" />
+  </joint>
+  <link
+    name="GL">
+    <inertial>
+      <origin
+        xyz="-0.00120742846754696 0.0303921637896519 -0.0019963683441141"
+        rpy="0 0 0" />
+      <mass
+        value="0.0133891690470259" />
+      <inertia
+        ixx="8.38430257957753E-06"
+        ixy="9.57111543683032E-07"
+        ixz="3.87011710941058E-10"
+        iyy="9.03876633701886E-07"
+        iyz="-7.30677044323104E-10"
+        izz="8.79344024430823E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/GL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.956862745098039 0.729411764705882 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/GL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J8"
+    type="revolute">
+    <origin
+      xyz="-0.002 -0.016 0.074772"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="L6" />
+    <child
+      link="GL" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.47"
+      upper="0"
+      effort="5.9"
+      velocity="24.82" />
+    <mimic
+      joint="J7"
+      multiplier="1.1875"
+      offset="0" />
+  </joint>
+  <link
+    name="GR">
+    <inertial>
+      <origin
+        xyz="-0.00219110330295491 0.0325415596938933 0.00199998042210914"
+        rpy="0 0 0" />
+      <mass
+        value="0.0144889719357076" />
+      <inertia
+        ixx="9.30627185757113E-06"
+        ixy="1.29819981936111E-06"
+        ixz="1.67437776277221E-12"
+        iyy="1.02896253392999E-06"
+        iyz="-5.85891155090587E-12"
+        izz="9.86550715118496E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/GR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.956862745098039 0.729411764705882 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kaka_arm_v7/meshes/GR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J9"
+    type="revolute">
+    <origin
+      xyz="-0.002 0.016 0.074772"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="L6" />
+    <child
+      link="GR" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.47"
+      upper="0"
+      effort="5.9"
+      velocity="24.82" />
+    <mimic
+      joint="J7"
+      multiplier="1.1875"
+      offset="0" />
+  </joint>
+</robot>

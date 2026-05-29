@@ -1,0 +1,26 @@
+# 左主臂配置模板：飞特 STS3215 串口总线，只读读取位置
+arm:
+  name: master_left
+  role: master
+  side: left
+
+safety:
+  default_read_only: true
+  auto_enable_on_startup: false
+  auto_home_on_startup: false
+  require_position_read_before_motion: true
+
+bus:
+  type: serial
+  port: COM8
+  baudrate: 1000000
+  timeout_s: 0.1
+
+joints:
+  - {name: joint1, index: 1, servo_model: STS3215, servo_id: 8, direction: 1, zero_offset_rad: 0.0, limit_min_rad: -3.1416, limit_max_rad: 3.1416}
+  - {name: joint2, index: 2, servo_model: STS3215, servo_id: 9, direction: 1, zero_offset_rad: 0.0, limit_min_rad: -3.1416, limit_max_rad: 3.1416}
+  - {name: joint3, index: 3, servo_model: STS3215, servo_id: 10, direction: 1, zero_offset_rad: 0.0, limit_min_rad: -3.1416, limit_max_rad: 3.1416}
+  - {name: joint4, index: 4, servo_model: STS3215, servo_id: 11, direction: 1, zero_offset_rad: 0.0, limit_min_rad: -3.1416, limit_max_rad: 3.1416}
+  - {name: joint5, index: 5, servo_model: STS3215, servo_id: 12, direction: 1, zero_offset_rad: 0.0, limit_min_rad: -3.1416, limit_max_rad: 3.1416}
+  - {name: joint6, index: 6, servo_model: STS3215, servo_id: 13, direction: 1, zero_offset_rad: 0.0, limit_min_rad: -3.1416, limit_max_rad: 3.1416}
+  - {name: joint7, index: 7, servo_model: STS3215, servo_id: 14, direction: 1, zero_offset_rad: 0.0, limit_min_rad: -3.1416, limit_max_rad: 3.1416}

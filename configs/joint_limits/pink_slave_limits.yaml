@@ -1,0 +1,9 @@
+# Joint limits, one line per joint:
+# <joint_name> <min_rad> <max_rad>
+joint1 -2.572099 2.664416
+joint2 -0.000954 3.182078
+joint3 -3.499466 -0.009728
+joint4 -1.610399 1.517319
+joint5 -2.100214 1.783589
+joint6 -1.882010 2.018959
+joint7 -0.531586 0.050000

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pink Slave URDF 3D Viewer</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div>
+          <h1>粉色从臂 URDF 3D 可视化</h1>
+          <p>真实达妙从臂 → Python WebSocket → Three.js URDF/STL 虚拟臂</p>
+        </div>
+        <div id="status">connecting...</div>
+      </header>
+      <main>
+        <section id="viewport"></section>
+        <aside>
+          <div class="panel">
+            <h2>关节状态</h2>
+            <table>
+              <thead>
+                <tr><th>关节</th><th>rad</th><th>deg</th></tr>
+              </thead>
+              <tbody id="joint-table"></tbody>
+            </table>
+          </div>
+          <div id="mapping-panel" class="panel hidden">
+            <h2>主臂 → 虚拟从臂映射</h2>
+            <div class="toolbar">
+              <button id="capture-anchor">捕获当前主臂为锚点</button>
+              <button id="enable-all">全启用</button>
+              <button id="disable-all">全禁用</button>
+              <button id="reset-map">重置</button>
+              <button id="save-mapping">保存到 teleop_mapping.yaml</button>
+              <button id="export-mapping">导出 YAML</button>
+            </div>
+            <div class="runtime">
+              <label>alpha <input id="map-alpha" type="number" step="0.05" min="0" max="1" value="0.35" /></label>
+              <label>max_step <input id="map-max-step" type="number" step="0.01" min="0" max="0.5" value="0.06" /></label>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>关节</th><th>启用</th><th>master</th><th>slave now</th><th>target</th><th>scale</th><th>sign</th><th>offset</th><th>limit</th>
+                </tr>
+              </thead>
+              <tbody id="mapping-table"></tbody>
+            </table>
+            <textarea id="mapping-yaml" rows="12" spellcheck="false" placeholder="导出的 YAML 会显示在这里"></textarea>
+          </div>
+          <div class="panel">
+            <h2>显示</h2>
+            <label><input id="show-visual" type="checkbox" checked /> STL visual mesh</label>
+            <label><input id="show-collision" type="checkbox" /> collision mesh</label>
+            <label><input id="show-axes" type="checkbox" checked /> world axes</label>
+            <label><input id="show-grid" type="checkbox" checked /> ground grid</label>
+          </div>
+          <div class="panel">
+            <h2>连接</h2>
+            <div id="connection-detail"></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

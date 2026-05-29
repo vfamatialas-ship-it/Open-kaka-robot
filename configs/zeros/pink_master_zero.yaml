@@ -1,0 +1,34 @@
+# Software zero positions. Do not edit while the robot is moving.
+# 软件零点文件。机械臂运动时不要编辑。
+profile: pink_master
+profile_label: 粉色主臂 / Pink Master
+saved_at: 13:34:16
+joints:
+  - name: joint1
+    device_id: 8
+    zero_position_rad: 3.138524692
+    zero_ticks: 2046
+  - name: joint2
+    device_id: 9
+    zero_position_rad: 3.146194596
+    zero_ticks: 2051
+  - name: joint3
+    device_id: 10
+    zero_position_rad: 3.141592654
+    zero_ticks: 2048
+  - name: joint4
+    device_id: 11
+    zero_position_rad: 3.141592654
+    zero_ticks: 2048
+  - name: joint5
+    device_id: 12
+    zero_position_rad: 3.141592654
+    zero_ticks: 2048
+  - name: joint6
+    device_id: 13
+    zero_position_rad: 3.141592654
+    zero_ticks: 2048
+  - name: joint7
+    device_id: 14
+    zero_position_rad: 3.141592654
+    zero_ticks: 2048

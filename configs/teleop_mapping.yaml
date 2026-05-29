@@ -1,0 +1,142 @@
+# Teleoperation mapping configuration.
+# 主从遥操作映射配置。真实从臂运动前必须先通过 Dry Run/虚拟调试验证。
+safety:
+  default_read_only: true
+  enable_slave_motion: false
+  require_limit_check_before_motion: true
+  emergency_stop_enabled: true
+mappings:
+- master_arm: master_left
+  slave_arm: slave_left
+  joints:
+  - master_joint: joint1
+    slave_joint: joint1
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint2
+    slave_joint: joint2
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint3
+    slave_joint: joint3
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint4
+    slave_joint: joint4
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint5
+    slave_joint: joint5
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint6
+    slave_joint: joint6
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint7
+    slave_joint: joint7
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+- master_arm: master_right
+  slave_arm: slave_right
+  joints:
+  - master_joint: joint1
+    slave_joint: joint1
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint2
+    slave_joint: joint2
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint3
+    slave_joint: joint3
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint4
+    slave_joint: joint4
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint5
+    slave_joint: joint5
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint6
+    slave_joint: joint6
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+  - master_joint: joint7
+    slave_joint: joint7
+    scale: 1.0
+    offset_rad: 0.0
+    enabled: false
+- master_arm: pink_master
+  slave_arm: pink_slave
+  mode: master_to_slave_verified_virtual
+  description: Verified in web virtual teleop before real slave motion.
+  updated_at: '2026-05-27T14:05:15'
+  runtime:
+    alpha: 0.6
+    max_step_rad: 0.06
+  joints:
+  - master_joint: joint1
+    slave_joint: joint1
+    enabled: true
+    scale: 1.0
+    sign: -1
+    offset_rad: 0.0
+    mapping_mode: zero_delta
+  - master_joint: joint2
+    slave_joint: joint2
+    enabled: true
+    scale: 1.0
+    sign: 1
+    offset_rad: 0.0
+    mapping_mode: zero_delta
+  - master_joint: joint3
+    slave_joint: joint3
+    enabled: true
+    scale: 1.0
+    sign: 1
+    offset_rad: 0.0
+    mapping_mode: zero_delta
+  - master_joint: joint4
+    slave_joint: joint4
+    enabled: true
+    scale: 1.0
+    sign: -1
+    offset_rad: 0.0
+    mapping_mode: zero_delta
+  - master_joint: joint5
+    slave_joint: joint5
+    enabled: true
+    scale: 1.0
+    sign: -1
+    offset_rad: 0.0
+    mapping_mode: zero_delta
+  - master_joint: joint6
+    slave_joint: joint6
+    enabled: true
+    scale: 1.0
+    sign: -1
+    offset_rad: 0.0
+    mapping_mode: zero_delta
+  - master_joint: joint7
+    slave_joint: joint7
+    enabled: true
+    scale: 1.0
+    sign: -1
+    offset_rad: 0.0
+    mapping_mode: zero_delta

@@ -1,0 +1,79 @@
+# Damiao per-joint command settings for teleoperation tests.
+# These values are conservative starting points and can be adjusted per joint.
+# control_mode:
+#   mit    -> Damiao MIT command, uses kp/kd/tau.
+#   posvel -> Damiao position-velocity command, uses posvel_velocity.
+# switch_mode / enable_old_mode are only enabled where real testing showed they are needed.
+
+pink_slave:
+  joint1:
+    control_mode: mit
+    kp: 16.0
+    kd: 1.2
+    tau: 0.0
+    slave_read_every: 2
+    limit_relax_rad: 0.0
+    switch_mode: false
+    enable_old_mode: false
+    note: tested, good initial effect
+  joint2:
+    control_mode: mit
+    kp: 14.0
+    kd: 1.2
+    tau: 0.0
+    posvel_velocity: 2.5
+    slave_read_every: 2
+    limit_relax_rad: 0.05
+    switch_mode: false
+    enable_old_mode: false
+    note: tested in full-arm follow; improves support in extreme poses
+  joint3:
+    control_mode: mit
+    kp: 14.0
+    kd: 1.0
+    tau: 0.08
+    slave_read_every: 2
+    limit_relax_rad: 0.05
+    switch_mode: false
+    enable_old_mode: false
+    note: positive tau added for gravity support in full-arm follow
+  joint4:
+    control_mode: mit
+    kp: 10.0
+    kd: 0.9
+    tau: 0.0
+    slave_read_every: 2
+    limit_relax_rad: 0.0
+    switch_mode: false
+    enable_old_mode: false
+    note: tested with zero-delta real follow
+  joint5:
+    control_mode: mit
+    kp: 10.0
+    kd: 0.9
+    tau: 0.0
+    slave_read_every: 2
+    limit_relax_rad: 0.0
+    switch_mode: false
+    enable_old_mode: false
+    note: tested with zero-delta real follow
+  joint6:
+    control_mode: mit
+    kp: 8.0
+    kd: 0.8
+    tau: 0.0
+    slave_read_every: 2
+    limit_relax_rad: 0.0
+    switch_mode: false
+    enable_old_mode: false
+    note: tested with zero-delta real follow
+  joint7:
+    control_mode: mit
+    kp: 8.0
+    kd: 0.8
+    tau: 0.0
+    slave_read_every: 2
+    limit_relax_rad: 0.0
+    switch_mode: false
+    enable_old_mode: false
+    note: tested with zero-delta real follow
