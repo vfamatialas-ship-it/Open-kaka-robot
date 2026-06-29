@@ -1,0 +1,19 @@
+# Ready-to-run config for THIS Kaka arm (values copied from the tuned ROS setup).
+robot:
+  serial_port: "/dev/ttyACM0"
+  urdf_path: "../urdf/kaka.urdf"   # relative to this config file (portable)
+
+  # kp/kd = impedance-hold gains; tau_limit = torque cap [Nm];
+  # limit_lower/limit_upper = OBJECTIVE joint limits [rad] (hardware travel).
+  motors:
+    - { name: J1, type: DM4340, can_id: 0x01, feedback_id: 0x11, direction: 1, gravity_scale: 0.0,  kp: 15.0, kd: 0.3, tau_limit: 20.0, limit_lower: -2.61, limit_upper: 2.61 }
+    - { name: J2, type: DM4340, can_id: 0x02, feedback_id: 0x12, direction: 1, gravity_scale: 1.45, kp: 46.8, kd: 0.3, tau_limit: 20.0, limit_lower: 0.0,   limit_upper: 3.14 }
+    - { name: J3, type: DM4340, can_id: 0x03, feedback_id: 0x13, direction: 1, gravity_scale: 1.8,  kp: 67.2, kd: 0.3, tau_limit: 20.0, limit_lower: -3.14, limit_upper: 0.0 }
+    - { name: J4, type: DM4310, can_id: 0x04, feedback_id: 0x14, direction: 1, gravity_scale: 2.05, kp: 5.0,  kd: 0.3, tau_limit: 8.0,  limit_lower: -1.57, limit_upper: 1.57 }
+    - { name: J5, type: DM4310, can_id: 0x05, feedback_id: 0x15, direction: 1, gravity_scale: 2.15, kp: 9.6,  kd: 0.3, tau_limit: 8.0,  limit_lower: -1.22, limit_upper: 1.22 }
+    - { name: J6, type: DM4310, can_id: 0x06, feedback_id: 0x16, direction: 1, gravity_scale: 0.0,  kp: 5.0,  kd: 0.3, tau_limit: 8.0,  limit_lower: -1.57, limit_upper: 1.57 }
+    - { name: J7, type: DM4310, can_id: 0x07, feedback_id: 0x17, direction: 1, gravity_scale: 0.0,  kp: 0.0,  kd: 0.3, tau_limit: 4.0,  limit_lower: -0.39, limit_upper: 0.0 }
+
+  mimics:
+    - { name: J8, mimic: J7, multiplier: 1.1875 }
+    - { name: J9, mimic: J7, multiplier: 1.1875 }

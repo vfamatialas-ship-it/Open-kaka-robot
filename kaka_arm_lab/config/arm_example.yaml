@@ -1,0 +1,28 @@
+robot:
+  # DaMiao USB-to-CAN adapter (USB-CDC serial port). Check with: ls /dev/ttyACM*
+  serial_port: "/dev/ttyACM0"
+
+  # URDF for gravity compensation (Pinocchio). Optional: omit to disable gravity.
+  urdf_path: "/abs/path/to/your_arm.urdf"
+
+  # Motors in joint order. For a DIFFERENT same-type arm, just change can_id /
+  # feedback_id, then RE-CALIBRATE (see README: zero, direction, gravity_scale).
+  #   can_id        : id used when SENDING a command to the motor
+  #   feedback_id   : id the motor REPLIES with (often can_id + 0x10)
+  #   direction     : +1 if motor +rotation matches URDF joint axis, else -1
+  #   gravity_scale : per-joint gravity magnitude trim (1.0 = model as-is)
+  #   kp, kd        : impedance-hold gains          tau_limit : torque cap [Nm]
+  #   limit_lower/upper : OBJECTIVE joint limits [rad] (hardware travel; checked
+  #                       by 00_selftest). If omitted, the URDF limits are used.
+  motors:
+    - { name: J1, type: DM4340, can_id: 0x01, feedback_id: 0x11, direction: 1, gravity_scale: 1.0, kp: 15.0, kd: 0.3, tau_limit: 20.0, limit_lower: -2.61, limit_upper: 2.61 }
+    - { name: J2, type: DM4340, can_id: 0x02, feedback_id: 0x12, direction: 1, gravity_scale: 1.0, kp: 40.0, kd: 0.3, tau_limit: 20.0, limit_lower: -3.14, limit_upper: 3.14 }
+    - { name: J3, type: DM4340, can_id: 0x03, feedback_id: 0x13, direction: 1, gravity_scale: 1.0, kp: 40.0, kd: 0.3, tau_limit: 20.0, limit_lower: -3.14, limit_upper: 3.14 }
+    - { name: J4, type: DM4310, can_id: 0x04, feedback_id: 0x14, direction: 1, gravity_scale: 1.0, kp: 6.0,  kd: 0.3, tau_limit: 8.0,  limit_lower: -1.57, limit_upper: 1.57 }
+    - { name: J5, type: DM4310, can_id: 0x05, feedback_id: 0x15, direction: 1, gravity_scale: 1.0, kp: 6.0,  kd: 0.3, tau_limit: 8.0,  limit_lower: -1.57, limit_upper: 1.57 }
+    - { name: J6, type: DM4310, can_id: 0x06, feedback_id: 0x16, direction: 1, gravity_scale: 1.0, kp: 4.0,  kd: 0.3, tau_limit: 8.0,  limit_lower: -1.57, limit_upper: 1.57 }
+
+  # Optional passive joints driven by a motor (e.g. gripper mimic fingers).
+  # mimics:
+  #   - { name: J8, mimic: J7, multiplier: 1.1875 }
+  #   - { name: J9, mimic: J7, multiplier: 1.1875 }

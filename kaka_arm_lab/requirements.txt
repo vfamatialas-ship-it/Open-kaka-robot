@@ -1,0 +1,6 @@
+pyserial>=3.5
+numpy>=1.21
+pyyaml>=5.4
+# Pinocchio (for gravity compensation). One of:
+#   pip install pin
+#   or apt: sudo apt install ros-jazzy-pinocchio   (then source /opt/ros/jazzy/setup.bash)

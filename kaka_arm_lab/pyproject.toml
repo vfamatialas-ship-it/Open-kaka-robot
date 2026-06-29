@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaka_arm_lab"
+version = "0.1.0"
+description = "Minimal SDK for DaMiao-motor arms: MIT control + gravity compensation over the DaMiao USB-to-CAN adapter"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "kaka", email = "vfamatialas@gmail.com" }]
+dependencies = [
+    "pyserial>=3.5",
+    "numpy>=1.21",
+    "pyyaml>=5.4",
+    # pin-pinocchio is installed via apt/conda/pip depending on your setup; see README
+]
+
+[project.optional-dependencies]
+gravity = ["pin>=2.6"]   # Pinocchio python bindings (package name on PyPI is "pin")
+
+[tool.setuptools.packages.find]
+include = ["kaka_arm_lab*"]
